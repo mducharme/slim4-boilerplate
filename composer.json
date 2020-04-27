@@ -1,0 +1,53 @@
+{
+    "name": "mducharme/slim4-boilerplate",
+    "description": "Charcoal Slim4 Boilerplate",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2",
+        "locomotivemtl/charcoal-view": "^0.4.0",
+        "slim/slim": "^4.5",
+        "slim/psr7": "^1.0",
+        "pimple/pimple": "^3.3",
+        "mustache/mustache": "^2.13",
+        "guzzlehttp/guzzle": "^6.5",
+        "locomotivemtl/charcoal-slim": "dev-master"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpstan/phpstan": "^0.12.10",
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App",
+            "Charcoal\\App\\": "src/Charcoal/App"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/App/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@tests"
+        ],
+        "tests": [
+            "@phplint",
+            "@phpcs",
+            "@phpunit",
+            "@phpstan"
+        ],
+        "phplint": "find src tests -type f -name '*.php' -print0 | xargs -0 -n1 -P8 php -l | grep -v '^No syntax errors detected'; test $? -eq 1",
+        "phpcs": "php vendor/bin/phpcs -ps --colors src/ tests/",
+        "phpcbf": "php vendor/bin/phpcbf -ps --colors src/ tests/",
+        "phpunit": "php vendor/bin/phpunit --coverage-text",
+        "phpstan": "php vendor/bin/phpstan analyze -n -l5 src/",
+        "start": "php -S localhost:8989 -t www"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}

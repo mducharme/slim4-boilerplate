@@ -1,0 +1,54 @@
+{
+  "routes": {
+    "home2": {
+      "type": "controller",
+      "controller": "home",
+      "methods": ["GET"]
+    },
+    "example1": {
+      "type": "view",
+      "template": "home",
+      "controller": "views/home"
+    },
+    "redirection2": {
+      "type": "redirection",
+      "target": "/target2"
+    },
+    "proxy": {
+      "type": "proxy",
+      "url": "https://locomotive.ca",
+      "requestOptions": {
+        "xdebug": true
+      }
+    },
+    "json1": {
+      "type": "json",
+      "controller": "json1",
+      "methods": ["GET"]
+    },
+    "json2": {
+      "type": "json",
+      "controller": "json2",
+      "methods": ["GET"]
+    },
+    "json3": {
+      "type": "json",
+      "controller": "json3",
+      "methods": ["GET"]
+    },
+    "target2": {
+      "type": "json",
+      "methods": ["GET"],
+      "controller": "json3",
+      "options": {
+        "redirect": "From /redirecion2"
+      }
+    },
+    "foo": {
+      "methods": ["GET"],
+      "controller": "app/controllers/foo"
+
+    }
+
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "contents": {
+    "home/title": "WELCOME TO THE BOILERPLATE"
+  },
+
+  "databases": {
+    "default": {
+      "type": "mysql",
+      "hostname": "127.0.0.1",
+      "username": "username",
+      "password": "password"
+    }
+  },
+
+  "loggers": {
+    "default": {
+
+    }
+  },
+
+
+
+  "view": {
+    "paths": [
+      "./views/",
+      "./boilerplate/views/"
+    ],
+    "defaultEngine": "mustache"
+  }
+}
