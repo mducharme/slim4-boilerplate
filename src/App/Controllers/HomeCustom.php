@@ -14,7 +14,7 @@ use Psr\Container\ContainerInterface;
 /**
  *  Controller
  */
-class Test
+class HomeCustom
 {
     /**
      * @var ContainerInterface

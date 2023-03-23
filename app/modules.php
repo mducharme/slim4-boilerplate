@@ -10,7 +10,7 @@ use Charcoal\App\Bootstrap;
  * Modules can:
  *   - alter the main config
  *   - register new services on the Coal pimple container
- *   - setup routes ans middlewares
+ *   - setup routes and middlewares
  */
 return function (Bootstrap $bootstrap) {
 

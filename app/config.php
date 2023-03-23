@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-// From 'locomotivemtl/charcoal-config'
 use Charcoal\Config\ConfigInterface;
 
 /**

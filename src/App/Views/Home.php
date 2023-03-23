@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Contexts\Views;
+namespace App\Views;
 
 class Home
 {
-    private $title = 'Home from view';
+    private $title = 'Home from view controller';
 
 
     public function __invoke(): array

@@ -1,20 +1,20 @@
 {
   "routes": {
-    "home2": {
+    "defined-controller-example": {
       "type": "controller",
       "controller": "home",
       "methods": ["GET"]
     },
-    "example1": {
+    "view-example": {
       "type": "view",
       "template": "home",
-      "controller": "views/home"
+      "view": "home"
     },
-    "redirection2": {
+    "redirection-example": {
       "type": "redirection",
-      "target": "/target2"
+      "target": "/redirection-target-example"
     },
-    "proxy": {
+    "proxy-example": {
       "type": "proxy",
       "url": "https://locomotive.ca",
       "requestOptions": {
@@ -23,28 +23,28 @@
     },
     "json1": {
       "type": "json",
-      "controller": "json1",
+      "context": "json1",
       "methods": ["GET"]
     },
     "json2": {
       "type": "json",
-      "controller": "json2",
+      "context": "json2",
       "methods": ["GET"]
     },
     "json3": {
       "type": "json",
-      "controller": "json3",
+      "context": "json3",
       "methods": ["GET"]
     },
-    "target2": {
+    "redirection-target-example": {
       "type": "json",
       "methods": ["GET"],
-      "controller": "json3",
+      "context": "json3",
       "options": {
-        "redirect": "From /redirecion2"
+        "redirect": "From redirection"
       }
     },
-    "foo": {
+    "controller-class-example": {
       "methods": ["GET"],
       "controller": "app/controllers/foo"
 
